@@ -5,7 +5,7 @@ import {schemaTypes} from './schemas'
 
 export default defineConfig({
   name: 'default',
-  title: 'Test Site',
+  title: 'Lisas Website Sanity Studio',
 
   projectId: 'tqyrdkqd',
   dataset: 'production',

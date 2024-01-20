@@ -1,6 +1,5 @@
 import blockContent from './blockContent'
-import category from './category'
-import post from './post'
-import author from './author'
+import timelineItem from './timelineItem'
+import timelineYear from './timelineYear'
 
-export const schemaTypes = [post, author, category, blockContent]
+export const schemaTypes = [blockContent, timelineItem, timelineYear]
