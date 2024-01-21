@@ -1,9 +1,9 @@
-import {defineField, defineType} from 'sanity'
+import { defineArrayMember, defineField, defineType } from 'sanity'
 
-export default defineType({
+export const timelineYear = defineType({
   name: 'timelineYear',
   title: 'Timeline Year',
-  type: 'document',
+  type: 'object',
   fields: [
     defineField({
       name: 'year',
@@ -12,9 +12,14 @@ export default defineType({
     }),
     defineField({
       name: 'timelineItems',
-      title: 'Timeline Items',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'timelineItem'}}],
+      title: 'Timeline Items',
+      of: [
+        defineArrayMember({
+          name: 'timelineItem',
+          type: 'timelineItem',
+        }),
+      ],
     }),
   ],
 })

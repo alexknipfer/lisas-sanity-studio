@@ -1,18 +1,16 @@
 import { defineField, defineType } from 'sanity'
 
-export const timelineItem = defineType({
-  name: 'timelineItem',
-  title: 'Timeline Item',
+export const pageDescription = defineType({
+  name: 'pageDescription',
   type: 'object',
+  title: 'Page Description',
   fields: [
     defineField({
-      name: 'name',
-      title: 'Name',
+      name: 'title',
       type: 'string',
     }),
     defineField({
       name: 'description',
-      title: 'Description',
       type: 'text',
     }),
   ],
