@@ -1,7 +1,9 @@
-import {defineConfig} from 'sanity'
-import {structureTool} from 'sanity/structure'
-import {visionTool} from '@sanity/vision'
-import {schemaTypes} from './schemas'
+import { defineConfig } from 'sanity'
+import { structureTool } from 'sanity/structure'
+import { visionTool } from '@sanity/vision'
+import { inlineSvgInput } from '@focus-reactive/sanity-plugin-inline-svg-input'
+
+import { schemaTypes } from './schemas'
 
 export default defineConfig({
   name: 'default',
@@ -10,7 +12,7 @@ export default defineConfig({
   projectId: 'tqyrdkqd',
   dataset: 'production',
 
-  plugins: [structureTool(), visionTool()],
+  plugins: [structureTool(), visionTool(), inlineSvgInput()],
 
   schema: {
     types: schemaTypes,
