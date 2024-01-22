@@ -6,7 +6,10 @@ export const pageType = defineType({
   title: 'Page',
   fields: [
     defineField({ name: 'title', type: 'string' }),
-    defineField({ name: 'slug', type: 'string' }),
+    defineField({
+      name: 'slug',
+      type: 'slug',
+    }),
     defineField({ name: 'sidebarOrder', type: 'number' }),
     defineField({ name: 'sidebarIcon', type: 'inlineSvg' }),
     defineField({
