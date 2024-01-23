@@ -3,7 +3,7 @@ import { defineArrayMember, defineField, defineType } from 'sanity'
 export const timeline = defineType({
   name: 'timeline',
   title: 'Timeline',
-  type: 'document',
+  type: 'object',
   fields: [
     defineField({
       name: 'name',

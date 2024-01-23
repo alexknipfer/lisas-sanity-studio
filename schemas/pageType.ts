@@ -19,8 +19,7 @@ export const pageType = defineType({
       of: [
         defineArrayMember({
           name: 'timeline',
-          type: 'reference',
-          to: [{ type: 'timeline' }],
+          type: 'timeline',
         }),
         defineArrayMember({
           name: 'pageDescription',

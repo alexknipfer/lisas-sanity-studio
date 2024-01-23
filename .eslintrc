@@ -1,3 +1,4 @@
 {
-  "extends": "@sanity/eslint-config-studio"
+  "ignorePatterns": ["temp.js", "**/migrations/*.js"],
+  "extends": "@sanity/eslint-config-studio",
 }
