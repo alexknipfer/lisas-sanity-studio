@@ -10,7 +10,6 @@ export const page = defineType({
       name: 'slug',
       type: 'slug',
     }),
-    defineField({ name: 'sidebarOrder', type: 'number' }),
     defineField({ name: 'sidebarIcon', type: 'inlineSvg' }),
     defineField({
       name: 'pageBuilder',
