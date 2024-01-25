@@ -1,17 +1,19 @@
-import { blockContent } from './blockContent'
-import { timelineItem } from './timelineItem'
-import { timelineYear } from './timelineYear'
-import { pageType } from './pageType'
-import { pageDescription } from './pageDescription'
-import { timeline } from './timeline'
-import { homePage } from './homePage'
+import { blockContent } from './objects/blockContent'
+import { timelineItem } from './objects/timelineItem'
+import { timelineYear } from './objects/timelineYear'
+import { page } from './documents/page'
+import { pageDescription } from './objects/pageDescription'
+import { timeline } from './objects/timeline'
+import { home } from './documents/home'
+import { settings } from './documents/settings'
 
 export const schemaTypes = [
   blockContent,
   timelineItem,
   timelineYear,
-  pageType,
+  page,
   pageDescription,
   timeline,
-  homePage,
+  home,
+  settings,
 ]
