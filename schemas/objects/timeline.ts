@@ -6,11 +6,6 @@ export const timeline = defineType({
   type: 'object',
   fields: [
     defineField({
-      name: 'name',
-      title: 'Timeline Name',
-      type: 'string',
-    }),
-    defineField({
       name: 'timelineYears',
       title: 'Timeline Years',
       type: 'array',
@@ -22,4 +17,11 @@ export const timeline = defineType({
       ],
     }),
   ],
+  preview: {
+    prepare() {
+      return {
+        title: 'Timeline',
+      }
+    },
+  },
 })

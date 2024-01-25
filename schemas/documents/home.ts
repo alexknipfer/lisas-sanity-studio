@@ -1,15 +1,11 @@
 import { defineArrayMember, defineField, defineType } from 'sanity'
 
-export const pageType = defineType({
-  name: 'page',
+export const home = defineType({
+  name: 'home',
   type: 'document',
-  title: 'Page',
+  title: 'Home',
   fields: [
-    defineField({ name: 'title', type: 'string' }),
-    defineField({
-      name: 'slug',
-      type: 'slug',
-    }),
+    defineField({ name: 'title', type: 'string', validation: (rule) => rule.required() }),
     defineField({ name: 'sidebarOrder', type: 'number' }),
     defineField({ name: 'sidebarIcon', type: 'inlineSvg' }),
     defineField({
@@ -17,10 +13,6 @@ export const pageType = defineType({
       type: 'array',
       title: 'Page builder',
       of: [
-        defineArrayMember({
-          name: 'timeline',
-          type: 'timeline',
-        }),
         defineArrayMember({
           name: 'pageDescription',
           type: 'pageDescription',
