@@ -10,20 +10,7 @@ export const settings = defineType({
       title: 'Menu Item list',
       description: 'Links displayed on the sidebar of your site',
       type: 'array',
-      of: [
-        {
-          title: 'Reference',
-          type: 'reference',
-          to: [
-            {
-              type: 'home',
-            },
-            {
-              type: 'page',
-            },
-          ],
-        },
-      ],
+      of: [],
     }),
   ],
   preview: {
