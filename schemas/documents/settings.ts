@@ -1,4 +1,4 @@
-import { defineField, defineType } from 'sanity'
+import { defineArrayMember, defineField, defineType } from 'sanity'
 
 export const settings = defineType({
   name: 'settings',
@@ -6,17 +6,22 @@ export const settings = defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'menuItems',
-      title: 'Menu Item list',
-      description: 'Links displayed on the sidebar of your site',
+      name: 'socialItems',
+      title: 'Social Item List',
+      description: 'Social links to be displayed.',
       type: 'array',
-      of: [],
+      of: [
+        defineArrayMember({
+          name: 'social',
+          type: 'social',
+        }),
+      ],
     }),
   ],
   preview: {
     prepare() {
       return {
-        title: 'Menu Items',
+        title: 'Settings',
       }
     },
   },

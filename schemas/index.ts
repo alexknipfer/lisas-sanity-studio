@@ -6,6 +6,7 @@ import { pageDescription } from './objects/pageDescription'
 import { timeline } from './objects/timeline'
 import { home } from './documents/home'
 import { settings } from './documents/settings'
+import { social } from './objects/social'
 
 export const schemaTypes = [
   blockContent,
@@ -16,4 +17,5 @@ export const schemaTypes = [
   timeline,
   home,
   settings,
+  social,
 ]
