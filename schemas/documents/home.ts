@@ -15,6 +15,10 @@ export const home = defineType({
           name: 'pageDescription',
           type: 'pageDescription',
         }),
+        defineArrayMember({
+          name: 'personalInformation',
+          type: 'personalInformation',
+        }),
       ],
     }),
   ],

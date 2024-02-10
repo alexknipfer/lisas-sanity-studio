@@ -7,6 +7,9 @@ import { timeline } from './objects/timeline'
 import { home } from './documents/home'
 import { settings } from './documents/settings'
 import { social } from './objects/social'
+import { personalInformation } from './objects/personalInformation'
+import { blockList } from './objects/blockList'
+import { personalListItem } from './objects/personalListItem'
 
 export const schemaTypes = [
   blockContent,
@@ -18,4 +21,7 @@ export const schemaTypes = [
   home,
   settings,
   social,
+  personalInformation,
+  blockList,
+  personalListItem,
 ]
