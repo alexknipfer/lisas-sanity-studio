@@ -1,11 +1,19 @@
 import { defineArrayMember, defineField, defineType } from 'sanity'
+import { NotebookText } from 'lucide-react'
 
 export const page = defineType({
   name: 'page',
   type: 'document',
-  title: 'Page',
+  title: 'Pages',
+  icon: NotebookText,
   fields: [
-    defineField({ name: 'title', type: 'string', validation: (rule) => rule.required() }),
+    defineField({
+      name: 'title',
+      type: 'string',
+      description:
+        'This is the main heading on the page. Use a title that best describes the page content.',
+      validation: (rule) => rule.required(),
+    }),
     defineField({
       name: 'slug',
       type: 'slug',
@@ -26,5 +34,21 @@ export const page = defineType({
         }),
       ],
     }),
+    defineField({
+      name: 'SEO',
+      type: 'seo',
+    }),
   ],
+  preview: {
+    select: {
+      title: 'title',
+      subtitle: 'slug.current',
+    },
+    prepare({ title, subtitle }) {
+      return {
+        title,
+        subtitle: `/${subtitle}`,
+      }
+    },
+  },
 })

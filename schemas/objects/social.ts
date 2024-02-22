@@ -1,4 +1,5 @@
 import { defineField, defineType } from 'sanity'
+import { Link } from 'lucide-react'
 
 export const social = defineType({
   name: 'social',
@@ -26,6 +27,13 @@ export const social = defineType({
     select: {
       title: 'label',
       subtitle: 'link',
+    },
+    prepare({ title, subtitle }) {
+      return {
+        title,
+        subtitle,
+        media: Link,
+      }
     },
   },
 })

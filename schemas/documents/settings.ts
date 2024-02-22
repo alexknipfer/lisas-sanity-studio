@@ -2,13 +2,13 @@ import { defineArrayMember, defineField, defineType } from 'sanity'
 
 export const settings = defineType({
   name: 'settings',
-  title: 'Settings',
   type: 'document',
+  title: 'Global Settings',
   fields: [
     defineField({
       name: 'socialItems',
-      title: 'Social Item List',
-      description: 'Social links to be displayed.',
+      title: 'Social Links',
+      description: 'These links appear on the left sidebar below page navigation links.',
       type: 'array',
       of: [
         defineArrayMember({

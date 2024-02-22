@@ -5,7 +5,13 @@ export const home = defineType({
   type: 'document',
   title: 'Home',
   fields: [
-    defineField({ name: 'title', type: 'string', validation: (rule) => rule.required() }),
+    defineField({
+      name: 'title',
+      description:
+        'This text will appear at the top of your home page as the primary heading. It is recommended to choose a header that best describes the page content.',
+      type: 'string',
+      validation: (rule) => rule.required(),
+    }),
     defineField({
       name: 'pageBuilder',
       type: 'array',
@@ -22,4 +28,11 @@ export const home = defineType({
       ],
     }),
   ],
+  preview: {
+    prepare() {
+      return {
+        title: 'Home Page Content',
+      }
+    },
+  },
 })

@@ -1,9 +1,11 @@
+import { UserRound } from 'lucide-react'
 import { defineArrayMember, defineField, defineType } from 'sanity'
 
 export const personalInformation = defineType({
   name: 'personalInformation',
   title: 'Personal Information',
   type: 'object',
+  icon: UserRound,
   fields: [
     defineField({
       name: 'personalList',

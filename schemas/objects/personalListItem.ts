@@ -1,9 +1,11 @@
+import { UserRound } from 'lucide-react'
 import { defineField, defineType } from 'sanity'
 
 export const personalListItem = defineType({
   name: 'personalListItem',
   title: 'Personal List Item',
   type: 'object',
+  icon: UserRound,
   fields: [
     defineField({
       name: 'title',

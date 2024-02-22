@@ -1,9 +1,11 @@
+import { CalendarDays } from 'lucide-react'
 import { defineArrayMember, defineField, defineType } from 'sanity'
 
 export const timeline = defineType({
   name: 'timeline',
   title: 'Timeline',
   type: 'object',
+  icon: CalendarDays,
   fields: [
     defineField({
       name: 'timelineItemIcon',
