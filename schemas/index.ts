@@ -10,6 +10,7 @@ import { social } from './objects/social'
 import { personalInformation } from './objects/personalInformation'
 import { blockList } from './objects/blockList'
 import { personalListItem } from './objects/personalListItem'
+import { seo } from './objects/seo'
 
 export const schemaTypes = [
   blockContent,
@@ -24,4 +25,5 @@ export const schemaTypes = [
   personalInformation,
   blockList,
   personalListItem,
+  seo,
 ]
