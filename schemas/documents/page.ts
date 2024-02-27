@@ -44,11 +44,5 @@ export const page = defineType({
       title: 'title',
       subtitle: 'slug.current',
     },
-    prepare({ title, subtitle }) {
-      return {
-        title,
-        subtitle: `/${subtitle}`,
-      }
-    },
   },
 })
