@@ -27,6 +27,10 @@ export const home = defineType({
         }),
       ],
     }),
+    defineField({
+      name: 'SEO',
+      type: 'seo',
+    }),
   ],
   preview: {
     prepare() {
